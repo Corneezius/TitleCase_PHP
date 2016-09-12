@@ -40,5 +40,18 @@
         // Assert
         $this->assertEquals("Beauty and the Beast", $result);
         }
+
+        function test_makeTitleCase_FirstWordException(){
+          // Arrange
+          $test_TitleCaseGenerator = new TitleCaseGenerator;
+          $input = "the lord of the rings";
+
+          //Act
+          $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+          //Assert
+          $this->assertEquals("The Lord of the Rings", $result);
+        }
       }
+
  ?>
