@@ -19,13 +19,26 @@
         {
             // Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "the little mermaid";
+            $input = "jurrasic park";
 
             // Act
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
             // Assert
-            $this->assertEquals("The Little Mermaid", $result);
+            $this->assertEquals("Jurrasic Park", $result);
         }
-    }
+
+        function test_makeTitleCase_exceptions()
+        {
+        // Arrange
+        $test_TitleCaseGenerator = new TitleCaseGenerator;
+        $input = "beauty and the beast";
+
+        // Act
+        $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+        // Assert
+        $this->assertEquals("Beauty and the Beast", $result);
+        }
+      }
  ?>
